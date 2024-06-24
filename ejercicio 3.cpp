@@ -2,10 +2,12 @@
 using namespace std;
 int factorial(int);
 void Sumatoria(int);
+void primo(int n);
 int main(){
     int n;
     cout<<"Ingrese un numero: "; cin>>n;
     Sumatoria(n);
+    primo(n);
     return 0;
 }
 
@@ -26,3 +28,26 @@ int factorial(int c){
     }
     return c; 
 }
+void primo(int n){
+int  i;	
+    cout << "\nIntroduce un numero: ";
+    cin >> n;
+
+    if(n==1)                                             
+    {
+        cout << "\nNo es primo" << endl;
+    }
+    else
+    {
+        i=2;         
+        while(n%i!=0) 
+        {
+            i++;      
+        }
+        if(i==n)      
+            cout << "\nPrimo" << endl;   
+        else
+            cout << "\nNo es primo" << endl; 
+    }
+}
+
